@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <br>
+  <!-- Basic Page Needs
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>CamoVid</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/footable.standalone.min.css">
+
+  <!-- Favicon
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Google icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-86869673-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- Hover effect: https://codepen.io/nxworld/pen/ZYNOBZ -->
+  <style>
+    img {
+      display: block;
+    }
+
+    .column-50 {
+      float: left;
+      width: 50%;
+    }
+
+    .row-50:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .floating-teaser {
+      float: left;
+      width: 30%;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .venue strong {
+      color: #99324b;
+    }
+
+    .benchmark {
+      width: 100%;
+      max-width: 960px;
+      overflow: scroll;
+      overflow-y: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Primary Page Layout
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <h4 style="text-align:center">A Large-Scale Video Dataset for Moving Camouflaged Animals Understanding</h4>
+    <p align="center" , style="margin-bottom:12px;">
+      <a class="simple" href="https://tuananh1007.github.io/">Tuan-Anh Vu</a><sup>1,3</sup>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="simple" href="https://zhengziqiang.github.io/">Ziqiang Zheng</a><sup>1</sup>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="simple" href="https://openreview.net/profile?id=~Chengyang_Song2">Chengyang Song</a><sup>2</sup>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="simple" href="https://tsingqguo.github.io/">Qing Guo</a><sup>3</sup>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="simple" href="https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang">Ivor Tsang</a><sup>3</sup>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="simple" href="https://saikit.org/">Sai-Kit Yeung</a><sup>1</sup>
+    </p>
+
+    <p align="center" style="margin-bottom:20px;">
+      <sup>1</sup>The Hong Kong University of Science and Technology, Hong Kong SAR
+      <br>
+      <sup>2</sup>Ocean University of China, China
+      <span style="display:inline-block; width: 32px"></span>
+      <sup>3</sup>CFAR & IHPC, A*STAR, Singapore
+      <!-- <span style="display:inline-block; width: 32px"></span>
+      <sup>4</sup>Trinity College Dublin, Ireland
+      <br> -->
+      <!-- <sup>&#35;</sup>co-first author
+      <span style="display:inline-block; width: 32px"></span>
+      <sup>&#128231;</sup>corresponding author -->
+      <br>
+    </p>
+
+    <!-- <div class="venue">
+      <p align="center"><h6 style="text-align:center"><b>CV4Animals: Computer Vision for Animal Behavior</b></h6> 
+        <strong>(Oral Presentation)</strong>
+      </p>
+    </div> -->
+
+    <figure>
+      <img src="files/Category_full.png" style="width:100%"></img>
+    </figure>
+    <p align="center">Category distribution and some visual examples (extracted animal masks) of our dataset. </p>
+
+    <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
+      <h5>Abstract</h5>
+      <p align="justify">
+        In recent years, there has been a growing interest in applying Computer Vision (CV), Artificial Intelligence (AI), and Deep Learning (DL) to the study of animals. However, only a few studies have specifically targeted camouflaged animals. Training DL models is often resource-intensive, requiring large amounts of accurately annotated data. Enhancing data diversity and scale is essential to mitigate algorithmic biases. To address these challenges, we present <b>CamoVid40K</b>, a diverse, large-scale, and accurately annotated video dataset of camouflaged animals. This dataset comprises <b>149</b> videos with <b>44,270</b> finely annotated frames, covering <b>69</b> animal categories. CamoVid40K is designed for various downstream tasks in CV, such as camouflaged animal classification, detection, and task-specific segmentation, etc.
+        <br>
+        <br>
+      </p>
+    </div>
+
+    <!-- <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
+      <h5>Video</h5>
+      <center>
+        <iframe width="770" height="432" src="https://www.youtube.com/embed/" title="Test-Time Augmentation for 3D Point Cloud Classification and Segmentation (ECCV 2022, Oral)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </center>
+    </div> -->
+
+
+    <div class="section">
+      <h5>Materials</h5>
+      <div class="container" style="width:95%">
+        <!-- Icon row -->
+        <div class="row">
+          <div class="three columns">
+            <a href="files/3DV2024_TTA.pdf"><img
+                style="border: 1px solid #ddd; border-radius: 4px; padding: 2px; width: 108px;"
+                src="files/page1.png"></a>
+          </div>
+          <!-- <div class="four columns">
+            <a href="assets/eccv22_poster_final.pdf"><img
+                style="border: 1px solid #ddd; border-radius: 4px; padding: 2px; width: 200px;"
+                src="files/poster_thumbnail.png"></a>
+          </div> -->
+          <div class="four columns">
+            <a href="https://camovid.hkustvgd.com"><img
+                style="border: 1px solid #ddd; border-radius: 4px; padding: 2px; width: 108px;"
+                src="files/Dataset.png"></a>
+          </div>
+        </div>
+        <!-- Link row -->
+        <div class="row">
+          <div class="three columns">
+            <a href="files/CamoVid40K_CV4Animal_CameraReady.pdf">Paper</a>
+          </div>
+          <!-- <div class="four columns">
+            <a href="files/CamoVid_poster.pdf">Poster (comming soon)</a>
+          </div> -->
+          <div class="four columns">
+            <a href="https://camovid.hkustvgd.com">Dataset (comming soon)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
+      <h5>Our CamoVid40K dataset</h5>
+
+      <center>
+        <div class="caption">
+          <p align="justify">
+            Camouflage is a powerful biological mechanism for avoiding detection and identification. In nature, camouflage tactics are employed to deceive the sensory and cognitive processes of both preys and predators. Wild animals utilize these tactics in various ways, ranging from blending themselves into the surrounding environment to employing disruptive patterns and colouration. Identifying camouflage is pivotal in many wildlife surveillance applications, as it assists in locating hidden individuals for study and protection.
+          </p>
+          <p align="justify">
+            Concealed scene understanding (CSU) is a hot computer vision topic aiming to learn discriminative features that can be used to discern camouflaged target objects from their surroundings. The MoCA dataset is the most extensive compilation of videos featuring camouflaged objects, yet it only provides detection labels. Consequently, researchers often evaluate the efficacy of sophisticated segmentation models by transforming segmentation masks into detection bounding boxes. With the recent advent of MoCA-Mask, there’s been a shift towards video segmentation in concealed scenes. However, despite these advancements, the data annotations remain insufficient in both volume and accuracy for developing a reliable video model capable of effectively handling complex concealed situations. The below table compares our proposed dataset with previous ones, showing that CamoVid40K surpasses all previous datasets in terms of the number of videos/frames and species included.
+          </p>
+        </div>
+      </center>
+
+      <center>
+        <img src="files/Comparison.png" style="width:100%"></img>
+      </center>
+      <br>
+      <p align="center">Comparison with existing video camouflaged animal datasets. Class.: Classification Label, B.Box: Bounding Box, Coarse OF:
+        Coarse Optical Flow, Expres.: Expression.</p>
+
+      <center>
+        <img src="files/WordCloud.png" style="width:100%"></img>
+      </center>
+      <br>
+      <p align="center">Word cloud of category distribution of camouflaged animals.</p>
+
+      <center>
+        <img src="files/radial_chart.png" style="width:100%"></img>
+      </center>
+      <br>
+      <p align="center">Taxonomic structure of our dataset.</p>
+      
+
+    </div>
+
+    <div class="section">
+      <h5>Citation</h5>
+      <pre style="margin:0">
+        <code>@inproceedings{tavu2024camovid,
+  title={A Large-Scale Video Dataset for Moving Camouflaged Animals Understanding},
+  author={Tuan-Anh Vu, Zheng Ziqiang, Chengyang Song, Qing Guo, Ivor Tsang, Sai-Kit Yeung},
+  booktitle={preprint},
+  year={2024}
+}</code>
+</pre>
+    </div>
+
+    <!-- -->
+    <br>
+
+    <div class="section">
+      <h5>Acknowledgements</h5>
+      <p>
+        This work is supported by an internal grant from HKUST (R9429). This work is partially done when Tuan-Anh Vu was a research resident at CFAR & IHPC, A*STAR, Singapore. The website is modified from this <a href="https://tuananh1007.github.io/RFNet-4D/">template</a>.
+      </p>
+      <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=nTZuh9Dq8LfoVGJmFbKa3DwQhT-EInzajSZP6GdqXBE&cl=ffffff&w=a"></script>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/footable.min.js"></script>
+  
+
+  <script type="text/javascript">
+    jQuery(function ($) {
+      $('.table').footable();
+    });
+  </script>
+
+  <!-- End Document
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
