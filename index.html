@@ -216,8 +216,66 @@
       <br>
       <p align="center">Taxonomic structure of our dataset.</p>
       
-
     </div>
+
+  <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
+    <h5>Visualizations</h5>
+
+      <style>
+          .video-mouseover {
+              -webkit-filter: brightness(100%);
+              -moz-filter: brightness(100%);
+              -o-filter: brightness(100%);
+              -ms-filter: brightness(100%);
+              filter: brightness(100%);
+          }
+
+          .video-mouseover:hover {
+              -webkit-filter: brightness(70%);
+              -moz-filter: brightness(70%);
+              -o-filter: brightness(70%);
+              -ms-filter: brightness(70%);
+              filter: brightness(70%);
+              cursor: pointer;
+          }
+      </style>
+      <div class="row ">
+          <div class="col-6" id="vid0" align="center">
+              <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
+                     poster="files/arabian_horn_viper.jpg">
+                  <source src='files/arabian_horn_viper.webm' type='video/webm'>
+              </video>
+              <p>Arabian Horn Viper</p>
+          </div>
+          <div class="col-6" id="vid1" align="center">
+              <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
+                     poster="files/arctic_fox_1.jpg">
+                  <source src='files/arctic_fox_1.webm' type='video/webm'>
+              </video>
+              <p>Arctic Fox</p>
+          </div>
+      </div>
+
+      <div class="row ">
+          <div class="col-6" id="vid2" align="center">
+              <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
+                     poster="files/flatfish_0.jpg">
+                  <source src='files/flatfish_0.webm' type='video/webm'>
+              </video>
+              <p>Flat Fish</p>
+          </div>
+          <div class="col-6" id="vid3" align="center">
+              <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
+                     poster="files/grasshopper_2.jpg">
+                  <source src='files/grasshopper_2.webm' type='video/webm'>
+              </video>
+              <p>Grasshopper</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col"><p>Oahu 23th July </p></div>
+      </div>
+  </div>
 
     <div class="section">
       <h5>Citation</h5>
@@ -246,6 +304,15 @@
   <script type="text/javascript" src="../js/jquery.min.js"></script>
   <script type="text/javascript" src="../js/footable.min.js"></script>
   
+  <script>
+    $('.video-mouseover').hover(function () {
+        if (this.hasAttribute("controls")) {
+            this.removeAttribute("controls")
+        } else {
+            this.setAttribute("controls", "controls")
+        }
+    });
+  </script>
 
   <script type="text/javascript">
     jQuery(function ($) {
