@@ -43,13 +43,27 @@
     ga('send', 'pageview');
   </script>
 
-  <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/javascript" async=""
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
   <!-- Hover effect: https://codepen.io/nxworld/pen/ZYNOBZ -->
   <style>
-    img {
-      display: block;
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
     }
+
+    .icon {
+      width: 72px;
+      /* Adjust size as needed */
+      vertical-align: bottom;
+      margin-right: 5px;
+      /* Adjust spacing as needed */
+    }
+
+    /* img {
+      display: block;
+    } */
 
     .column-50 {
       float: left;
@@ -87,7 +101,8 @@
   <!-- Primary Page Layout
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-    <h4 style="text-align:center">A Large-Scale Video Dataset for Moving Camouflaged Animals Understanding</h4>
+    <h4 style="text-align:center"><img src="files/chameleon_logo.png" alt="Icon" class="icon">CamoVid60K: A Large-Scale Video Dataset for Moving Camouflaged Animals Understanding</h4>
+
     <p align="center" , style="margin-bottom:12px;">
       <a class="simple" href="https://tuananh1007.github.io/">Tuan-Anh Vu</a><sup>1,3</sup>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -97,7 +112,8 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a class="simple" href="https://tsingqguo.github.io/">Qing Guo</a><sup>3</sup>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a class="simple" href="https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang">Ivor Tsang</a><sup>3</sup>
+      <a class="simple" href="https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang">Ivor
+        Tsang</a><sup>3</sup>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a class="simple" href="https://saikit.org/">Sai-Kit Yeung</a><sup>1</sup>
     </p>
@@ -123,6 +139,7 @@
       </p>
     </div> -->
 
+    <br>
     <figure>
       <img src="files/Category_full.png" style="width:100%"></img>
     </figure>
@@ -131,9 +148,27 @@
     <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
       <h5>Abstract</h5>
       <p align="justify">
-        In recent years, there has been a growing interest in applying Computer Vision (CV), Artificial Intelligence (AI), and Deep Learning (DL) to the study of animals. However, only a few studies have specifically targeted camouflaged animals. Training DL models is often resource-intensive, requiring large amounts of accurately annotated data. Enhancing data diversity and scale is essential to mitigate algorithmic biases. To address these challenges, we present <b>CamoVid40K</b>, a diverse, large-scale, and accurately annotated video dataset of camouflaged animals. This dataset comprises <b>149</b> videos with <b>44,270</b> finely annotated frames, covering <b>69</b> animal categories. CamoVid40K is designed for various downstream tasks in CV, such as camouflaged animal classification, detection, and task-specific segmentation, etc.
-        <br>
-        <br>
+        We have been witnessing remarkable success led by the power of neural networks driven by a significant scale of
+        training data in handling various computer vision tasks.
+        However, less attention has been paid to monitoring the camouflaged animals, the masters of hiding themselves in
+        the background.
+        Performing robust and precise camouflaged animal segmentation is not trivial even for domain experts because of
+        their consistent appearance with backgrounds.
+        Even though several efforts were made to perform camouflaged animal image segmentation, there is only some work
+        on camouflaged animal video segmentation to the best of the author's knowledge.
+        Biologists usually favor videos with redundant information and temporal consistencies to perform biological
+        monitoring and understanding of the behavior and events of animals.
+        The scarcity of such labeled video data is the most hindering issue.
+        To address these challenges, we present <b>CamoVid60K</b>, a diverse, large-scale, and accurately annotated
+        video dataset of camouflaged animals.
+        This dataset comprises <b>218</b> videos with <b>62,774</b> finely annotated frames, covering <b>70</b> animal
+        categories, which surpasses all previous datasets in terms of the number of videos/frames and species included.
+        <b>CamoVid60K</b> also offers more diverse downstream tasks in CV, such as camouflaged animal classification,
+        detection, and task-specific segmentation (semantic, referring, motion), etc.
+        We have benchmarked several state-of-the-art algorithms on the proposed <b>CamoVid60K</b> dataset, and the
+        experimental results provide valuable insights into future research directions.
+        Our dataset stands as a novel and challenging testing set to stimulate more powerful camouflaged animal video
+        segmentation algorithms, and there is still a large room for further improvement.
       </p>
     </div>
 
@@ -144,15 +179,15 @@
         <!-- Icon row -->
         <div class="row">
           <div class="three columns">
-            <a href="files/3DV2024_TTA.pdf"><img
+            <a href="files/NeurIPS24_Camo_Vid_Dataset_Preprint.pdf"><img
                 style="border: 1px solid #ddd; border-radius: 4px; padding: 2px; width: 108px;"
                 src="files/page1.png"></a>
           </div>
-          <div class="four columns">
-            <a href="files/CamoVid40k_CV4Animal_Poster.pdf"><img
+          <!-- <div class="four columns">
+            <a href="files/CamoVid60K_CV4Animal_Poster.pdf"><img
                 style="border: 1px solid #ddd; border-radius: 4px; padding: 2px; width: 200px;"
                 src="files/poster_thumbnail.png"></a>
-          </div>
+          </div> -->
           <div class="four columns">
             <a href="https://camovid.hkustvgd.com"><img
                 style="border: 1px solid #ddd; border-radius: 4px; padding: 2px; width: 108px;"
@@ -162,11 +197,11 @@
         <!-- Link row -->
         <div class="row">
           <div class="three columns">
-            <a href="files/CamoVid40K_CV4Animal_CameraReady.pdf">Paper</a>
+            <a href="files/NeurIPS24_Camo_Vid_Dataset_Preprint.pdf">Paper</a>
           </div>
-          <div class="four columns">
-            <a href="files/CamoVid40k_CV4Animal_Poster.pdf">Poster</a>
-          </div>
+          <!-- <div class="four columns">
+            <a href="files/CamoVid60K_CV4Animal_Poster.pdf">Poster</a>
+          </div> -->
           <div class="four columns">
             <a href="https://camovid.hkustvgd.com">Dataset (comming soon)</a>
           </div>
@@ -177,15 +212,28 @@
     <br>
 
     <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
-      <h5>Our CamoVid40K dataset</h5>
+      <h5>Our CamoVid60K dataset</h5>
 
       <center>
         <div class="caption">
           <p align="justify">
-            Camouflage is a powerful biological mechanism for avoiding detection and identification. In nature, camouflage tactics are employed to deceive the sensory and cognitive processes of both preys and predators. Wild animals utilize these tactics in various ways, ranging from blending themselves into the surrounding environment to employing disruptive patterns and colouration. Identifying camouflage is pivotal in many wildlife surveillance applications, as it assists in locating hidden individuals for study and protection.
+            Camouflage is a powerful biological mechanism for avoiding detection and identification. In nature,
+            camouflage tactics are employed to deceive the sensory and cognitive processes of both preys and predators.
+            Wild animals utilize these tactics in various ways, ranging from blending themselves into the surrounding
+            environment to employing disruptive patterns and colouration. Identifying camouflage is pivotal in many
+            wildlife surveillance applications, as it assists in locating hidden individuals for study and protection.
           </p>
           <p align="justify">
-            Concealed scene understanding (CSU) is a hot computer vision topic aiming to learn discriminative features that can be used to discern camouflaged target objects from their surroundings. The MoCA dataset is the most extensive compilation of videos featuring camouflaged objects, yet it only provides detection labels. Consequently, researchers often evaluate the efficacy of sophisticated segmentation models by transforming segmentation masks into detection bounding boxes. With the recent advent of MoCA-Mask, there’s been a shift towards video segmentation in concealed scenes. However, despite these advancements, the data annotations remain insufficient in both volume and accuracy for developing a reliable video model capable of effectively handling complex concealed situations. The below table compares our proposed dataset with previous ones, showing that CamoVid40K surpasses all previous datasets in terms of the number of videos/frames and species included.
+            Concealed scene understanding (CSU) is a hot computer vision topic aiming to learn discriminative features
+            that can be used to discern camouflaged target objects from their surroundings. The MoCA dataset is the most
+            extensive compilation of videos featuring camouflaged objects, yet it only provides detection labels.
+            Consequently, researchers often evaluate the efficacy of sophisticated segmentation models by transforming
+            segmentation masks into detection bounding boxes. With the recent advent of MoCA-Mask, there’s been a shift
+            towards video segmentation in concealed scenes. However, despite these advancements, the data annotations
+            remain insufficient in both volume and accuracy for developing a reliable video model capable of effectively
+            handling complex concealed situations. The below table compares our proposed dataset with previous ones,
+            showing that CamoVid60K surpasses all previous datasets in terms of the number of videos/frames and species
+            included.
           </p>
         </div>
       </center>
@@ -194,96 +242,118 @@
         <img src="files/Comparison.png" style="width:100%"></img>
       </center>
       <br>
-      <p align="center">Comparison with existing video camouflaged animal datasets. Class.: Classification Label, B.Box: Bounding Box, Coarse OF:
-        Coarse Optical Flow, Expres.: Expression.</p>
+      <p align="center"><b>Comparison with existing video animal datasets.</b> Class.: Classification Label, B.Box:
+        Bounding Box, Motion: Motion of Animal, Coarse OF: Coarse Optical Flow, Expres.: Expression. </p>
+
+      <p align="justify"><b>Note that,</b> MVK dataset mostly consists of normal marine animals with only some
+        camouflaged animals. The frequency of annotations refers to how often each frame is annotated. For instance,
+        MoCA-Mask provides annotations for every five frames, resulting in 4,691 annotated frames. In contrast, our
+        CamoVid60K dataset offers a significantly larger volume of data with more frequent annotations and a wider
+        variety of annotation types.</p>
+
+      <br>
+      <center>
+        <img src="files/Data_pipeline.png" style="width:100%"></img>
+      </center>
+      <br>
+      <p align="center"><b>CamoVid60K data pipeline.</b> Stage I includes data curation, filtering irrelevant videos,
+        and
+        extracting all frames. Stage II includes data annotation, generation, and filtering.</p>
+
+      <center>
+        <img src="files/dataset_organization.png" style="width:60%"></img>
+      </center>
+      <br>
+      <p align="center">Data organization of our dataset.</p>
 
       <center>
         <img src="files/WordCloud.png" style="width:100%"></img>
       </center>
       <br>
       <p align="center">Word cloud of category distribution of camouflaged animals.</p>
-
       <center>
         <img src="files/radial_chart.png" style="width:100%"></img>
       </center>
       <br>
       <p align="center">Taxonomic structure of our dataset.</p>
-      
+
     </div>
 
-  <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
-    <h5>Visualizations</h5>
+    <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
+      <h5>Visualizations</h5>
+
+      <p align="center">Please see <a href="more_results.html">this page</a> for more results.</p>
 
       <style>
-          .video-mouseover {
-              -webkit-filter: brightness(100%);
-              -moz-filter: brightness(100%);
-              -o-filter: brightness(100%);
-              -ms-filter: brightness(100%);
-              filter: brightness(100%);
-          }
+        .video-mouseover {
+          -webkit-filter: brightness(100%);
+          -moz-filter: brightness(100%);
+          -o-filter: brightness(100%);
+          -ms-filter: brightness(100%);
+          filter: brightness(100%);
+        }
 
-          .video-mouseover:hover {
-              -webkit-filter: brightness(70%);
-              -moz-filter: brightness(70%);
-              -o-filter: brightness(70%);
-              -ms-filter: brightness(70%);
-              filter: brightness(70%);
-              cursor: pointer;
-          }
+        .video-mouseover:hover {
+          -webkit-filter: brightness(70%);
+          -moz-filter: brightness(70%);
+          -o-filter: brightness(70%);
+          -ms-filter: brightness(70%);
+          filter: brightness(70%);
+          cursor: pointer;
+        }
       </style>
       <div class="row ">
-          <div class="six columns" id="vid0" align="center">
-              <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
-                     poster="files/arabian_horn_viper.jpg">
-                  <source src='files/arabian_horn_viper.webm' type='video/webm'>
-              </video>
-              <p>Arabian Horn Viper</p>
-          </div>
-          <div class="six columns" id="vid1" align="center">
-              <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
-                     poster="files/arctic_fox_1.jpg">
-                  <source src='files/arctic_fox_1.webm' type='video/webm'>
-              </video>
-              <p>Arctic Fox</p>
-          </div>
-      </div>
-
-      <div class="row ">
-          <div class="six columns" id="vid2" align="center">
-              <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
-                     poster="files/flatfish_0.jpg">
-                  <source src='files/flatfish_0.webm' type='video/webm'>
-              </video>
-              <p>Flat Fish</p>
-          </div>
-          <div class="six columns" id="vid3" align="center">
-              <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
-                     poster="files/flounder_5.jpg">
-                  <source src='files/flounder_5.webm' type='video/webm'>
-              </video>
-              <p>Flounder</p>
-          </div>
+        <div class="six columns" id="vid0" align="center">
+          <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
+            poster="files/arabian_horn_viper.jpg">
+            <source src='files/arabian_horn_viper.webm' type='video/webm'>
+          </video>
+          <p>Arabian Horn Viper</p>
+        </div>
+        <div class="six columns" id="vid1" align="center">
+          <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
+            poster="files/arctic_fox_1.jpg">
+            <source src='files/arctic_fox_1.webm' type='video/webm'>
+          </video>
+          <p>Arctic Fox</p>
+        </div>
       </div>
 
       <div class="row ">
         <div class="six columns" id="vid2" align="center">
-            <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
-                   poster="files/eastern_screech_owl_1.jpg">
-                <source src='files/eastern_screech_owl_1.webm' type='video/webm'>
-            </video>
-            <p>Eastern Screech Owl</p>
+          <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
+            poster="files/flatfish_0.jpg">
+            <source src='files/flatfish_0.webm' type='video/webm'>
+          </video>
+          <p>Flat Fish</p>
         </div>
         <div class="six columns" id="vid3" align="center">
-            <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
-                   poster="files/grasshopper_2.jpg">
-                <source src='files/grasshopper_2.webm' type='video/webm'>
-            </video>
-            <p>Grasshopper</p>
+          <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
+            poster="files/flounder_5.jpg">
+            <source src='files/flounder_5.webm' type='video/webm'>
+          </video>
+          <p>Flounder</p>
         </div>
-    </div>
+      </div>
 
-  </div>
+      <div class="row ">
+        <div class="six columns" id="vid2" align="center">
+          <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
+            poster="files/eastern_screech_owl_1.jpg">
+            <source src='files/eastern_screech_owl_1.webm' type='video/webm'>
+          </video>
+          <p>Eastern Screech Owl</p>
+        </div>
+        <div class="six columns" id="vid3" align="center">
+          <video width='100%' autoplay="false" preload="false" loop class="video-mouseover"
+            poster="files/grasshopper_2.jpg">
+            <source src='files/grasshopper_2.webm' type='video/webm'>
+          </video>
+          <p>Grasshopper</p>
+        </div>
+      </div>
+
+    </div>
 
     <div class="section">
       <h5>Citation</h5>
@@ -303,22 +373,25 @@
     <div class="section">
       <h5>Acknowledgements</h5>
       <p>
-        This work is supported by an internal grant from HKUST (R9429). This work is partially done when Tuan-Anh Vu was a research resident at CFAR & IHPC, A*STAR, Singapore. The website is modified from this <a href="https://tuananh1007.github.io/RFNet-4D/">template</a>.
+        This work is supported by an internal grant from HKUST (R9429). This work is partially done when Tuan-Anh Vu was
+        a research resident at CFAR & IHPC, A*STAR, Singapore. The website is modified from this <a
+          href="https://tuananh1007.github.io/RFNet-4D/">template</a>.
       </p>
-      <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=nTZuh9Dq8LfoVGJmFbKa3DwQhT-EInzajSZP6GdqXBE&cl=ffffff&w=a"></script>
+      <script type="text/javascript" id="clustrmaps"
+        src="//clustrmaps.com/map_v2.js?d=nTZuh9Dq8LfoVGJmFbKa3DwQhT-EInzajSZP6GdqXBE&cl=ffffff&w=a"></script>
     </div>
   </div>
 
   <script type="text/javascript" src="../js/jquery.min.js"></script>
   <script type="text/javascript" src="../js/footable.min.js"></script>
-  
+
   <script>
     $('.video-mouseover').hover(function () {
-        if (this.hasAttribute("controls")) {
-            this.removeAttribute("controls")
-        } else {
-            this.setAttribute("controls", "controls")
-        }
+      if (this.hasAttribute("controls")) {
+        this.removeAttribute("controls")
+      } else {
+        this.setAttribute("controls", "controls")
+      }
     });
   </script>
 

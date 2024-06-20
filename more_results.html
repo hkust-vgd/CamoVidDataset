@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CamoVid60K Dataset</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="files/chameleon_icon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+        }
+
+        .video-grid {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            width: calc(33.333% - 20px);
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+        }
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* .video-container video {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+        } */
+
+        .caption {
+            margin-top: 10px;
+        }
+
+        .pagination {
+            margin-top: 20px;
+        }
+
+        .page-button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .page-button.active {
+            background-color: #007bff;
+            color: #fff;
+            border-color: #007bff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .icon {
+            width: 72px; /* Adjust size as needed */
+            vertical-align: bottom;
+            margin-right: 5px; /* Adjust spacing as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>More Results</h1>
+        <br>
+        
+        <!-- <figure>
+            <img src="files/Category_full.png" style="width:100%"></img>
+        </figure>
+        <p>Category distribution and some visual examples (extracted animal masks) of our dataset. </p> -->
+
+        <p>We show some samples in alphabetical order of our CamoVid60K dataset below. Please click on each sample to see the ground-truth masks.</p>
+
+
+        <!-- Video Grids -->
+        <div class="video-grid" id="page-1">
+            <div class="video-container">
+                <video controls poster="files/arabian_horn_viper.jpg">
+                    <source src="files/arabian_horn_viper.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Arabian Horn Viper</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/arctic_fox_1.jpg">
+                    <source src="files/arctic_fox_1.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Arctic Fox</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/alligator_snapping_turtle.jpg">
+                    <source src="files/alligator_snapping_turtle.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Alligator Snapping Turtle</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/black_cat_0.jpg">
+                    <source src="files/black_cat_0.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Black Cat</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/chameleon.jpg">
+                    <source src="files/chameleon.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Chameleon</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/copperhead_snake.jpg">
+                    <source src="files/copperhead_snake.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Copperhead Snake</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/crab_2.jpg">
+                    <source src="files/crab_2.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Crab</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/cuttlefish_4.jpg">
+                    <source src="files/cuttlefish_4.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Cuttle Fish</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/dead_leaf_butterfly_1.jpg">
+                    <source src="files/dead_leaf_butterfly_1.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Dead Leaf Butterfly</p>
+            </div>
+        </div>
+
+        <div class="video-grid" id="page-2">
+            <div class="video-container">
+                <video controls poster="files/desert_fox.jpg">
+                    <source src="files/desert_fox.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Desert Fox</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/devil_scorpionfish_2.jpg">
+                    <source src="files/devil_scorpionfish_2.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Devil Scorpion Fish</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/eastern_screech_owl_1.jpg">
+                    <source src="files/eastern_screech_owl_1.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Eastern Screech Owl</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/egyptian_nightjar.jpg">
+                    <source src="files/egyptian_nightjar.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Egyptian Nightjar</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/elephant.jpg">
+                    <source src="files/elephant.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Elephant</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/flower_crab_spider_0.jpg">
+                    <source src="files/flower_crab_spider_0.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Flower Crab Spider</p>
+            </div>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <video controls poster="files/flatfish_0.jpg">
+                        <source src="files/flatfish_0.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <p class="caption">Flat Fish</p>
+            </div>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <video controls poster="files/flounder_5.jpg">
+                        <source src="files/flounder_5.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>    
+                </div>
+                <p class="caption">Flounder</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/goat_0.jpg">
+                    <source src="files/goat_0.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Goat</p>
+            </div>
+        </div>
+
+        <div class="video-grid" id="page-3">
+            <div class="video-container">
+                <video controls poster="files/grasshopper_2.jpg">
+                    <source src="files/grasshopper_2.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Grasshopper</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/hedgehog_1.jpg">
+                    <source src="files/hedgehog_1.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Hedgehog</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/hermit_crab.jpg">
+                    <source src="files/hermit_crab.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Hermit Crab</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/horned_owl.jpg">
+                    <source src="files/horned_owl.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Horned Owl</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/hyena.jpg">
+                    <source src="files/hyena.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Hyena</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/jerboa.jpg">
+                    <source src="files/jerboa.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Jerboa</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/leaf_katydid.jpg">
+                    <source src="files/leaf_katydid.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Leaf Katydid</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/leaf_tail_gecko.jpg">
+                    <source src="files/leaf_tail_gecko.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Leaf Tail Gecko</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/lichen_katydid.jpg">
+                    <source src="files/lichen_katydid.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Lichen Katydid</p>
+            </div>
+        </div>
+
+        <div class="video-grid" id="page-4">
+            <div class="video-container">
+                <video controls poster="files/lion_cub_0.jpg">
+                    <source src="files/lion_cub_0.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Lion Cub</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/lioness.jpg">
+                    <source src="files/lioness.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Lioness</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/markhor.jpg">
+                    <source src="files/markhor.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Markhor</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/meerkat.jpg">
+                    <source src="files/meerkat.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Meerkat</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/mimic_octopus.jpg">
+                    <source src="files/mimic_octopus.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Mimic Octopus</p>
+            </div>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <video controls poster="files/moth.jpg">
+                        <source src="files/moth.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p class="caption">Moth</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/nile_monitor_0.jpg">
+                    <source src="files/nile_monitor_0.jpg" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Nile Monitor</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/stone_fish.jpg">
+                    <source src="files/stone_fish.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Stone Fish</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="files/wobbegong_shark.jpg">
+                    <source src="files/wobbegong_shark.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Wobbegong Shark</p>
+            </div>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination">
+            <span class="page-button" data-page="1">1</span>
+            <span class="page-button" data-page="2">2</span>
+            <span class="page-button" data-page="3">3</span>
+            <span class="page-button" data-page="4">4</span>
+            <!-- Add more page buttons as needed -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const pages = document.querySelectorAll('.video-grid');
+            const pageButtons = document.querySelectorAll('.page-button');
+
+            function showPage(pageNumber) {
+                pages.forEach(page => page.style.display = 'none');
+                document.getElementById(`page-${pageNumber}`).style.display = 'flex';
+                pageButtons.forEach(button => button.classList.remove('active'));
+                document.querySelector(`.page-button[data-page="${pageNumber}"]`).classList.add('active');
+            }
+
+            pageButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    showPage(this.getAttribute('data-page'));
+                });
+            });
+
+            // Show the first page by default
+            showPage(1);
+        });
+    </script>
+</body>
+
+</html>
